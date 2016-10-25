@@ -18,8 +18,10 @@
 
 ### How to run
 ```
-$ git clone THIS_URL
+$ git clone https://github.com/continuata/riot-seed.git
+$ cd riot-seed
 $ yarn --ignore-engines
+$ mkdir public
 $ yarn dev
 ```
 
