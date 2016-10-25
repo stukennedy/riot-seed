@@ -1,0 +1,44 @@
+header.navbar {
+  min-height: 80px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 6px -4px black;
+  -moz-box-shadow: 0 4px 6px -4px black;
+  box-shadow: 0 4px 6px -4px black;
+
+  ul.navbar-nav>li>a {
+    font-size: 20px;
+    color: black;
+    background: none;
+    &:active,
+    &:hover,
+    &:visited {
+      background: none;
+      border-bottom: 3px solid $yellow;
+    }
+  }
+
+  ul.navbar-nav>.active>a,
+  ul.navbar-nav>.active>a:focus,
+  ul.navbar-nav>.active>a:hover {
+    background: none;
+    border-bottom: 3px solid $green;
+  }
+
+  a.navbar-brand {
+    padding-top: 0px;
+    img {
+      width: 180px;
+    }
+  }
+
+  li a.user-link {
+    padding-top: 5px;
+
+    img.user-img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import 'colours';
+
+@import 'header';
+@import 'footer';
+@import 'login';
+@import 'home';
+@import 'project-box';
+@import 'uploader';
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body {
+  background-color: $background;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.haudio-font {
+  font-family: 'Comfortaa', sans-serif;
+  &.bold {
+    font-weight: bold;
+  }
+}
+
+.content-wrapper .container-content {
+  background-color: $content-background;
+  padding: 100px 30px 100px 30px;
+  min-height: 500px;
+}

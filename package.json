@@ -1,0 +1,77 @@
+{
+  "name": "riot-seed",
+  "version": "1.0.0",
+  "description": "RiotJS seed project",
+  "main": "src/index.js",
+  "scripts": {
+    "ava": "ava --concurrency 4 --timeout 1m --tap",
+    "test": "npm-run-all lint ava",
+    "html": "cp ./app/index.html ./public/",
+    "img": "cp -r ./app/img ./public/",
+    "bundle": "webpack -p -d --progress --colors",
+    "build": "npm-run-all lint html img bundle",
+    "serve": "webpack-dev-server --hot",
+    "watch": "./node_modules/.bin/webpack-dev-server",
+    "lint": "standard --fix",
+    "dev": "npm-run-all html img serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/continuata/riot-seed.git"
+  },
+  "author": "Continuata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/continuata/riot-seed/issues"
+  },
+  "homepage": "https://github.com/continuata/riot-seed#readme",
+  "dependencies": {
+    "blaze": "^3.0.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "lodash": "^4.16.2",
+    "normalize.css": "^5.0.0",
+    "riot": "^2.6.2",
+    "riot-router": "^0.8.1"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel": "^6.5.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "css-loader": "^0.25.0",
+    "expose-loader": "^0.7.1",
+    "file-loader": "^0.9.0",
+    "jsdom": "^9.8.3",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.10.1",
+    "npm-run-all": "^3.1.0",
+    "riotjs-loader": "^3.0.0",
+    "sass-loader": "^4.0.2",
+    "standard": "^8.3.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "standard": {
+    "globals": [
+      "riot",
+      "fetch"
+    ]
+  },
+  "ava": {
+    "babel": "inherit",
+    "files": [
+      "tests/**/*.spec.js"
+    ],
+    "require": [
+      "babel-register",
+      "./tests/utils/node-extensions",
+      "./tests/utils/dom"
+    ]
+  }
+}

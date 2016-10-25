@@ -1,0 +1,65 @@
+.project-box {
+  width: 80%;
+  height: 150px;
+  border-bottom: 1px solid $green;
+  border-right: 1px solid $yellow;
+  background: white;
+  margin-bottom: 25px;
+
+  img.thumb {
+    vertical-align: top;
+    height: 150px;
+    width: 150px;
+  }
+
+  img.play-button {
+    vertical-align: bottom;
+    display: inline-block;
+    margin: 2px 2px 24px 8px;
+    height: 55px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .header {
+    width: calc(100% - 245px);
+    margin-top: 8px;
+    display: inline-block;
+    position: relative;
+    .owner {
+      vertical-align: top;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .title {
+      font-size: 18px;
+      margin-bottom: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    div.time {
+      position: absolute;
+      font-size: 14px;
+      right: 4px;
+      top: 4px;
+
+      span.current {
+        padding: 0px 6px 0px 6px;
+        color: white;
+        background: #666;
+      }
+      span.duration {
+        color: #666;
+        width: 120px;
+      }
+    }
+  }
+}

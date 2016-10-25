@@ -1,0 +1,38 @@
+login {
+  img.background {
+    width: 100%;
+    // position: fixed;
+  }
+  .login-box {
+    position: fixed;
+    top: 200px;
+    left: -380px;
+    margin-left: 50%;
+
+    button {
+      margin-left: 70px;
+      margin-top: 10px;
+      width: 260px;
+      height: 60px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-align: left;
+      padding-left: 20px;
+      color: white;
+
+      img.icon {
+        height: 40px;
+        margin-right: 20px;
+      }
+
+      &.twitter {
+        display: inline-block;
+        background-color: #4099ff;
+      }
+      &.facebook {
+        display: inline-block;
+        background-color: #3b5998;
+      }
+    }
+  }
+}

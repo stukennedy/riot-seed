@@ -1,0 +1,19 @@
+.nav-pills>li {
+  &.active>a,
+  a {
+    font-size: 18px;
+    border-radius: 0px;
+    color: #333;
+    &:focus,
+    &:hover {
+      color: #333;
+      background: none;
+      border-bottom: 3px solid $yellow;
+    }
+  }
+
+  &.active>a {
+    background: none;
+    border-bottom: 3px solid $green;
+  }
+}
